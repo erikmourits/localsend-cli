@@ -6,13 +6,31 @@ Works with any device running LocalSend (Android, iOS, Windows, macOS, Linux).
 
 ## Install
 
+**One-liner (Linux & macOS):**
+
 ```bash
-# Download and make executable
-curl -fsSL https://raw.githubusercontent.com/Chordlini/localsend-cli/main/localsend-cli -o ~/.local/bin/localsend-cli
-chmod +x ~/.local/bin/localsend-cli
+curl -fsSL https://raw.githubusercontent.com/Chordlini/localsend-cli/master/install.sh | bash
 ```
 
-**Requirements:** Python 3.8+, `openssl` (for TLS)
+The installer auto-detects your OS and puts the CLI in the right place:
+
+| OS | Install location | Dependencies |
+|----|-----------------|--------------|
+| **macOS** | `/usr/local/bin/localsend-cli` | Python 3.8+, openssl (both included with macOS) |
+| **Linux** | `~/.local/bin/localsend-cli` | Python 3.8+, openssl |
+
+**Manual install:**
+
+```bash
+# macOS
+curl -fsSL https://raw.githubusercontent.com/Chordlini/localsend-cli/master/localsend-cli -o /usr/local/bin/localsend-cli
+chmod +x /usr/local/bin/localsend-cli
+
+# Linux
+mkdir -p ~/.local/bin
+curl -fsSL https://raw.githubusercontent.com/Chordlini/localsend-cli/master/localsend-cli -o ~/.local/bin/localsend-cli
+chmod +x ~/.local/bin/localsend-cli
+```
 
 ## Usage
 
